@@ -13,8 +13,8 @@
     <!-- 第一屏 -->
     <section class="container-fluid">
         <!-- 导航栏部分 -->
-        <nav class="navbar navbar-expand-lg bg-light navbar-light">
-            <div class="navbar-brand">logo</div>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="navbar-brand"><img width="250" src="./k9logo.png" alt="" srcset=""></div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -27,25 +27,35 @@
             </div>
         </nav>
         <!-- 主要内容 -->
-        <div>
-            <p>We build blockchain ecosystems.</p>
-            <canvas></canvas>
+        <div class="content1 d-flex flex-column flex-md-row ">
+            <h2 class="slogan container">We build blockchain ecosystems.</h2>
+            <div class="container svg-container d-flex justify-content-center align-items-center">
+                <svg id="points"></svg>
+            </div>
+            <!-- <canvas id="circle"></canvas> -->
         </div>
     </section>
     <!-- 第二屏 -->
-    <section class="container-fluid">
-        <canvas></canvas>
+    <section class="container-fluid content2">
+        <!-- <svg id="circle"></svg> -->
+        <div id="circle"></div>
     </section>
     <!-- 第三屏 -->
-    <section class="container-fluid">
-        <div>logo</div>
-        <div>contact us</div>
-        <a href="mailto:Info@krypto9.com">Info@krypto9.com</a>
-        <div>logos</div>
+    <section class="container-fluid content3">
+        <div><img src="./k9logo.png" width="280" alt=""></div>
+        <p style="margin-top: 100px;">contact us</p>
+        <p><a class="text-reset text-decoration-none" href="mailto:Info@krypto9.com">Info@krypto9.com</a></p>
+        <div class="d-flex justify-content-center" style="margin-top: 60px;">
+            <span> logo1 &nbsp;</span>
+            <span> logo2 &nbsp;</span>
+            <span> logo3 </span>
+        </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="d3/d3.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
