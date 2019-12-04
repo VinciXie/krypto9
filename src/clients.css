@@ -1,0 +1,525 @@
+@charset "utf-8";
+/* CSS Document */
+/*---------preload assets----*/
+body:after{
+ display:none;
+ content:
+	url("../assets/services/client-500.svg")
+    url("../assets/services/client-aelf.svg")
+    url("../assets/services/client-ardor.svg")
+    url("../assets/services/client-bancor.svg")
+    url("../assets/services/client-bin.svg")
+    url("../assets/services/client-bitt.svg")
+    url("../assets/services/client-cardano.svg")
+    url("../assets/services/client-con.svg")
+    url("../assets/services/client-dxe.svg")
+    url("../assets/services/client-et.svg")
+    url("../assets/services/client-huobi.svg")
+    url("../assets/services/client-icon.svg")
+    url("../assets/services/client-land.svg")
+    url("../assets/services/client-matic.svg")
+    url("../assets/services/client-neo.svg")
+    url("../assets/services/client-qtum.svg")
+    url("../assets/services/client-rsk.svg")
+    url("../assets/services/client-simplex.svg")
+    url("../assets/services/client-skrill.svg")
+    url("../assets/services/client-tron.svg")
+    url("../assets/services/client-wan.svg")
+}
+
+body {
+    --hleft: 45;
+    --hright: 35;
+    --hgap: 10;
+    --btn-trans: 0.2s ease;
+    --mh: 4vw;
+    --ch: 5vw;
+    --color1: #d2c3e6;
+    --color2: #e2efff;
+    --client-color: #E3E3E3;
+    border-width: 0px;
+    margin: 0;
+}
+
+/* -------services Bar------- */
+.services {
+	--sdelay:3;
+    width: 100%;
+    height: var(--ch);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+	background-color: #EEEEEE;
+}
+.services-title {
+	-webkit-box-shadow: 0px 2px 4px #0000004d;
+	        box-shadow: 0px 2px 4px #0000004d;
+    z-index: 100;
+    position: relative;
+	background: -o-linear-gradient(290deg, var(--color1) 30%, var(--color2) 60%);
+	background: linear-gradient(160deg, var(--color1) 30%, var(--color2) 60%);
+    background-color: #EEEEEE;
+    width: 100%;
+	height: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: var(--color1);
+    padding-right: 4px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+	font-size: 14px;
+	
+}
+.point {
+    height: 100px;
+    width: 16px;
+    /*    margin-top: -0.8%;*/
+}
+.line {
+    background-color: black;
+    height: 2px;
+    width: 40px;
+}
+.cubes {
+    width: 75%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	cursor: pointer;
+}
+.cubes .cube {
+    display: inline-block;
+    -webkit-perspective: 2.4vw;
+            perspective: 2.4vw;
+    height: var(--ch);
+    width: 100%;
+}
+.flip1, .flip2, .flip3, .flip4, .flip5, .flip6 {
+    z-index: 100;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    height: inherit;
+    width: 100%;
+    -webkit-transform: translateZ(calc(var(--ch)*-0.5));
+            transform: translateZ(calc(var(--ch)*-0.5));
+    -webkit-transition: -webkit-transform 1s var(--cubeease);
+    transition: -webkit-transform 1s var(--cubeease);
+    -o-transition: transform 1s var(--cubeease);
+    transition: transform 1s var(--cubeease);
+    transition: transform 1s var(--cubeease), -webkit-transform 1s var(--cubeease);
+	-webkit-transform-origin: center center var(--trans-z);
+	    -ms-transform-origin: center center var(--trans-z);
+	        transform-origin: center center var(--trans-z);
+    float: left;
+}
+.side {
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    opacity: 1;
+    background-color: #EEEEEE;
+/*    transition: 1s var(--cubeease);*/
+    background-repeat: no-repeat;
+    background-position: center;
+	-webkit-transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	transition: 0.5s ease;
+    /*
+	border-left: 1px solid rgba(197,197,197,1.00);
+	border-right: 1px solid rgba(197,197,197,1.00);
+	border-bottom: 0px solid rgba(197,197,197,1.00);
+	border-top: 0px solid rgba(197,197,197,1.00);
+*/
+}
+/*
+.side:hover{
+	background-color: white;
+	}
+*/
+
+.bottom {
+    -webkit-transform: rotateX(-90deg) translateZ(calc(var(--ch)*0.5));
+            transform: rotateX(-90deg) translateZ(calc(var(--ch)*0.5));
+}
+.back {
+    -webkit-transform: rotateX(180deg) translateZ(calc(var(--ch)*0.5));
+            transform: rotateX(180deg) translateZ(calc(var(--ch)*0.5));
+}
+.top {
+    -webkit-transform: rotateX(90deg) translateZ(calc(var(--ch)*0.5));
+            transform: rotateX(90deg) translateZ(calc(var(--ch)*0.5));
+}
+.front {
+    -webkit-transform: rotateX(0deg) translateZ(calc(var(--ch)*0.5));
+            transform: rotateX(0deg) translateZ(calc(var(--ch)*0.5));
+}
+.show1 {
+    -webkit-transform: translateZ(-70px) rotateX(-360deg);
+            transform: translateZ(-70px) rotateX(-360deg);
+}
+.show3 {
+    -webkit-transform: translateZ(-70px) rotateX(-180deg);
+            transform: translateZ(-70px) rotateX(-180deg);
+}
+.show2 {
+    -webkit-transform: translateZ(calc(var(--ch)*-0.5)) rotateX(-90deg);
+            transform: translateZ(calc(var(--ch)*-0.5)) rotateX(-90deg);
+}
+.show4 {
+    -webkit-transform: translateZ(-70px) rotateX(-270deg);
+            transform: translateZ(-70px) rotateX(-270deg);
+}
+
+/*--------- cube 1 ---------*/
+
+.flip1 .front {
+    background-image: url("../assets/services/client-huobi-bw.svg");
+}
+.flip1 .top {
+    background-image: url("../assets/services/client-bitt-bw.svg");
+}
+.flip1 .back {
+    background-image: url("../assets/services/client-500-bw.svg");
+}
+.flip1 .bottom {
+    background-image: url("../assets/services/client-bancor-bw.svg");
+}
+
+/*--------- cube 2 ---------*/
+
+.flip2 .front {
+    background-image: url("../assets/services/client-bin-bw.svg");
+}
+.flip2 .top {
+    background-image: url("../assets/services/client-neo-bw.svg");
+}
+.flip2 .back {
+    background-image: url("../assets/services/client-simplex-bw.svg");
+}
+.flip2 .bottom {
+    background-image: url("../assets/services/client-dxe-bw.svg");
+}
+
+/*--------- cube 3 ---------*/
+
+.flip3 .front {
+    background-image: url("../assets/services/client-tron-bw.svg");
+}
+.flip3 .top {
+    background-image: url("../assets/services/client-qtum-bw.svg");
+}
+.flip3 .back {
+    background-image: url("../assets/services/client-land-bw.svg");
+}
+.flip3 .bottom {
+    background-image: url("../assets/services/client-aelf-bw.svg");
+}
+
+/*--------- cube 4 ---------*/
+
+.flip4 .front {
+    background-image: url("../assets/services/client-cardano-bw.svg");
+}
+.flip4 .top {
+    background-image: url("../assets/services/client-matic-bw.svg");
+}
+.flip4 .back {
+    background-image: url("../assets/services/client-rsk-bw.svg");
+}
+.flip4 .bottom {
+    background-image: url("../assets/services/client-qtum-bw.svg");
+}
+
+/*--------- cube 5 ---------*/
+
+.flip5 .front {
+    background-image: url("../assets/services/client-et-bw.svg");
+}
+.flip5 .top {
+    background-image: url("../assets/services/client-icon-bw.svg");
+}
+.flip5 .back {
+    background-image: url("../assets/services/client-wan-bw.svg");
+}
+.flip5 .bottom {
+    background-image: url("../assets/services/client-skrill-bw.svg");
+}
+
+/*--------- cube 6 ---------*/
+
+.flip6 .front {
+    background-image: url("../assets/services/client-con-bw.svg");
+}
+.flip6 .top {
+    background-image: url("../assets/services/client-skrill-bw.svg");
+}
+.flip6 .back {
+    background-image: url("../assets/services/client-ardor-bw.svg");
+}
+.flip6 .bottom {
+    background-image: url("../assets/services/client-bitt-bw.svg");
+}
+
+/*--------- cube 1 ---------*/
+
+/* .flip1 .front:hover {
+    background-image: url("../assets/services/client-huobi.svg");
+}
+.flip1 .top:hover {
+    background-image: url("../assets/services/client-bitt.svg");
+}
+.flip1 .back:hover {
+    background-image: url("../assets/services/client-500.svg");
+}
+.flip1 .bottom:hover {
+    background-image: url("../assets/services/client-bancor.svg");
+} */
+
+/*--------- cube 2 ---------*/
+
+/* .flip2 .front:hover {
+    background-image: url("../assets/services/client-bin.svg");
+}
+.flip2 .top:hover {
+    background-image: url("../assets/services/client-neo.svg");
+}
+.flip2 .back:hover {
+    background-image: url("../assets/services/client-simplex.svg");
+}
+.flip2 .bottom:hover {
+    background-image: url("../assets/services/client-dxe.svg");
+} */
+
+/*--------- cube 3 ---------*/
+
+/* .flip3 .front:hover {
+    background-image: url("../assets/services/client-tron.svg");
+}
+.flip3 .top:hover {
+    background-image: url("../assets/services/client-qtum.svg");
+}
+.flip3 .back:hover {
+    background-image: url("../assets/services/client-land.svg");
+}
+.flip3 .bottom:hover {
+    background-image: url("../assets/services/client-aelf.svg");
+} */
+
+/*--------- cube 4 ---------*/
+
+/* .flip4 .front:hover {
+    background-image: url("../assets/services/client-cardano.svg");
+}
+.flip4 .top:hover {
+    background-image: url("../assets/services/client-matic.svg");
+}
+.flip4 .back:hover {
+    background-image: url("../assets/services/client-rsk.svg");
+}
+.flip4 .bottom:hover {
+    background-image: url("../assets/services/client-qtum.svg");
+} */
+
+/*--------- cube 5 ---------*/
+
+/* .flip5 .front:hover {
+    background-image: url("../assets/services/client-et.svg");
+}
+.flip5 .top:hover {
+    background-image: url("../assets/services/client-icon.svg");
+}
+.flip5 .back:hover {
+    background-image: url("../assets/services/client-wan.svg");
+}
+.flip5 .bottom:hover {
+    background-image: url("../assets/services/client-skrill.svg");
+} */
+
+/*--------- cube 6 ---------*/
+
+/* .flip6 .front:hover {
+    background-image: url("../assets/services/client-con.svg");
+}
+.flip6 .top:hover {
+    background-image: url("../assets/services/client-skrill.svg");
+}
+.flip6 .back:hover {
+    background-image: url("../assets/services/client-ardor.svg");
+}
+.flip6 .bottom:hover {
+    background-image: url("../assets/services/client-bitt.svg");
+} */
+
+
+
+.cube-image {
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.flip-shadow {
+    -webkit-filter: brightness(0.8);
+            filter: brightness(0.8);
+}
+
+
+.flip1 {
+	-webkit-animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s) infinite ;
+	        animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s) infinite ;	
+}
+.flip2 {
+	-webkit-animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 0.2s) infinite ;
+	        animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 0.2s) infinite ;	
+}
+.flip3 {
+	-webkit-animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 0.4s) infinite ;
+	        animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 0.4s) infinite ;	
+}
+.flip4 {
+	-webkit-animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 0.6s) infinite ;
+	        animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 0.6s) infinite ;	
+}
+.flip5 {
+	-webkit-animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 0.8s) infinite ;
+	        animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 0.8s) infinite ;	
+}
+.flip6 {
+	-webkit-animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 1s) infinite ;
+	        animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 1s) infinite ;	
+}
+
+/*
+.flip1 .front {
+	-webkit-animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s) infinite ;
+	        animation: front-shadow 20s var(--cubeease) calc(var(--sdelay) * 1s) infinite ;	
+}
+.flip1 .top {
+	-webkit-animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s) infinite ;
+	        animation: top-shadow 20s var(--cubeease) calc(var(--sdelay) * 1s) infinite ;	
+}
+.flip1 .back {
+	-webkit-animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s) infinite ;
+	        animation: back-shadow 20s var(--cubeease) calc(var(--sdelay) * 1s) infinite ;	
+}
+.flip1 .bottom {
+	-webkit-animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s) infinite ;
+	        animation: bottom-shadow 20s var(--cubeease) calc(var(--sdelay) * 1s) infinite ;	
+}
+*/
+/*
+.flip1:hover{
+  -webkit-animation-play-state:paused;
+  -moz-animation-play-state:paused;
+  -o-animation-play-state:paused;
+  animation-play-state:paused;
+  cursor: pointer;
+}
+*/
+
+.cube{
+	--trans-z:calc(var(--ch)*-0.5);
+	--cubeease:cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+@-webkit-keyframes flip-horizontal-bottom {
+    0%{
+        -webkit-transform: rotateX(0) translateZ(var(--trans-z));
+        transform: rotateX(0) translateZ(var(--trans-z));
+    }
+    5%, 25% {
+        -webkit-transform: rotateX(-90deg) translateZ(var(--trans-z));
+        transform: rotateX(-90deg) translateZ(var(--trans-z));
+    }
+    30%, 50% {
+        -webkit-transform: rotateX(-180deg) translateZ(var(--trans-z));
+        transform: rotateX(-180deg) translateZ(var(--trans-z));
+    }
+	55%, 75% {
+        -webkit-transform: rotateX(-270deg) translateZ(var(--trans-z));
+        transform: rotateX(-270deg) translateZ(var(--trans-z));
+    }
+	80%, 100% {
+        -webkit-transform: rotateX(-360deg) translateZ(var(--trans-z));
+        transform: rotateX(-360deg) translateZ(var(--trans-z));
+    }
+}
+/*
+@-webkit-keyframes front-shadow {
+    0%, 80% {
+        filter: unset
+    }
+    5%, 25% {
+		filter: brightness(0.8)
+    }
+}
+@-webkit-keyframes top-shadow {
+    0%, 25%, 55%, 100% {
+        filter: unset
+    }
+    30%, 50% {
+		filter: brightness(0.8)
+    }
+}
+@-webkit-keyframes back-shadow {
+    0%, 50%, 80%, 100% {
+        filter: unset
+    }
+    55%, 75% {
+		filter: brightness(0.8)
+    }
+}
+@-webkit-keyframes bottom-shadow {
+    0%, 75% {
+        filter: unset
+    }
+    80%, 100% {
+		filter: brightness(0.8)
+    }
+}
+*/
+/*
+.bitt{
+	background-image: url("../assets/services/client-bitt.svg");
+}
+.bitt::after{
+	background-image: url("../assets/services/client-bitt-bw.svg");
+}
+.services-logo{
+	width: 300px;
+	height: 100px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	transition: 1s ease;
+    visibility: hidden;
+}
+.services-logo:hover{
+	visibility: visible;
+}
+.services-logo::after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	transition: 1s ease;
+	visibility: visible;
+}
+.services-logo:hover::after{
+	opacity: 0;
+
+}
+*/
