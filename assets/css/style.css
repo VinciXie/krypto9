@@ -1,9 +1,37 @@
+@font-face {
+    font-family: k9;
+    src: url(/Avenir-95-Custom.Outerline-Normal.ttf)
+}
 
+.section1 {
+    background-color: #000;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-logo {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    height: 100px;
+    width: 300px;
+    background-image: url(/k9logo-white.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 10;
+}
 
 .slogan {
-    font-size: 40px;
-    color: red;
+    font-size: 4em;
     text-align: center;
+    font-family: k9;
+    width: 50%;
+    min-width: 300px;
+    color: whitesmoke;
 }
 
 .nav-link {
@@ -14,10 +42,12 @@
     overflow: hidden;
 }
 
+
 .content1 {
-    /* display: flex; */
+    display: flex;
     height: calc(99vh - 100px);
     text-align: center;
+    flex-wrap: wrap-reverse;
 }
 .content1 canvas {
     margin: auto;
@@ -54,20 +84,4 @@
     font-size: 60px;
     color: black;
     text-align: center;
-}
-
-#points {
-    animation: haha 10s linear infinite;
-}
-
-@keyframes haha {
-	0% {transform:rotate(0deg);}
- 
-	25% {transform:rotate(90deg);}
- 
-	50% {transform:rotate(180deg);}
- 
-	75% {transform:rotate(270deg);}
- 
-	100% {transform:rotate(360deg);}
 }

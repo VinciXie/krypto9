@@ -3,7 +3,7 @@ var sphereRad = 280;
 var radius_sp=1;
 
 // canvas 的背景色
-const bgc = '#fff'
+const bgc = '#000'
 
 function canvasApp() {
 	var theCanvas = document.getElementById("canvasOne");

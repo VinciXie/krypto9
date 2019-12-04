@@ -7,28 +7,35 @@
     <title>Krypto9</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css"
+        integrity="sha256-MHZlm8KTLRxClmwQTYIfJEVbcRx1VIgfZJjaBOGCDoc=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="navbar-brand top-logo"></div>
+
+    <div id="fullpage">
     <!-- 第一屏 -->
-    <section class="container-fluid">
+    <section class="section container-fluid section1">
         <!-- 导航栏部分 -->
         <nav class="navbar navbar-expand-md navbar-light">
-            <div class="navbar-brand"><img width="250" src="./k9logo.png" alt="" srcset=""></div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#">services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">
+                        <span style="font-size: 2.5em; color: whitesmoke;">services</span>
+                    </a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#">contact</a></li> -->
                 </ul>
             </div>
         </nav>
         <!-- 主要内容 -->
         <div class="content1">
-            <canvas id="canvasOne" width="900" height="520" ></canvas>
-            <h2 class="slogan container">We build blockchain ecosystems.</h2>
+            <h2 class="slogan container flex-center">We build blockchain ecosystems.</h2>
+            <canvas id="canvasOne" width="600" height="520"></canvas>
         </div>
         <!-- <div class="content1 d-flex flex-column flex-md-row ">
             <h2 class="slogan container">We build blockchain ecosystems.</h2>
@@ -38,13 +45,7 @@
         </div> -->
     </section>
     <!-- 第二屏 -->
-    <section class="container-fluid content2">
-        <!-- <svg id="circle"></svg> -->
-        <div id="circle"></div>
-    </section>
-    <!-- 第三屏 -->
-    <section class="container-fluid content3">
-        <div><img src="./k9logo.png" width="280" alt=""></div>
+    <section class="section container-fluid content3">
         <p style="margin-top: 100px;">contact us</p>
         <p><a class="text-reset text-decoration-none" href="mailto:Info@krypto9.com">Info@krypto9.com</a></p>
         <div class="d-flex justify-content-center" style="margin-top: 60px;">
@@ -53,9 +54,12 @@
             <span> logo3 </span>
         </div>
     </section>
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="js/fullpage.js"></script>
 </body>
 </html>

@@ -1,30 +1,30 @@
 @charset "utf-8";
 /* CSS Document */
 /*---------preload assets----*/
-body:after{
- display:none;
+body::after{
+ display: none;
  content:
-	url("../assets/services/client-500.svg")
-    url("../assets/services/client-aelf.svg")
-    url("../assets/services/client-ardor.svg")
-    url("../assets/services/client-bancor.svg")
-    url("../assets/services/client-bin.svg")
-    url("../assets/services/client-bitt.svg")
-    url("../assets/services/client-cardano.svg")
-    url("../assets/services/client-con.svg")
-    url("../assets/services/client-dxe.svg")
-    url("../assets/services/client-et.svg")
-    url("../assets/services/client-huobi.svg")
-    url("../assets/services/client-icon.svg")
-    url("../assets/services/client-land.svg")
-    url("../assets/services/client-matic.svg")
-    url("../assets/services/client-neo.svg")
-    url("../assets/services/client-qtum.svg")
-    url("../assets/services/client-rsk.svg")
-    url("../assets/services/client-simplex.svg")
-    url("../assets/services/client-skrill.svg")
-    url("../assets/services/client-tron.svg")
-    url("../assets/services/client-wan.svg")
+	url("/services/client-500.svg")
+    url("/services/client-aelf.svg")
+    url("/services/client-ardor.svg")
+    url("/services/client-bancor.svg")
+    url("/services/client-bin.svg")
+    url("/services/client-bitt.svg")
+    url("/services/client-cardano.svg")
+    url("/services/client-con.svg")
+    url("/services/client-dxe.svg")
+    url("/services/client-et.svg")
+    url("/services/client-huobi.svg")
+    url("/services/client-icon.svg")
+    url("/services/client-land.svg")
+    url("/services/client-matic.svg")
+    url("/services/client-neo.svg")
+    url("/services/client-qtum.svg")
+    url("/services/client-rsk.svg")
+    url("/services/client-simplex.svg")
+    url("/services/client-skrill.svg")
+    url("/services/client-tron.svg")
+    url("/services/client-wan.svg")
 }
 
 body {
@@ -185,181 +185,181 @@ body {
 /*--------- cube 1 ---------*/
 
 .flip1 .front {
-    background-image: url("../assets/services/client-huobi-bw.svg");
+    background-image: url("/services/client-huobi-bw.svg");
 }
 .flip1 .top {
-    background-image: url("../assets/services/client-bitt-bw.svg");
+    background-image: url("/services/client-bitt-bw.svg");
 }
 .flip1 .back {
-    background-image: url("../assets/services/client-500-bw.svg");
+    background-image: url("/services/client-500-bw.svg");
 }
 .flip1 .bottom {
-    background-image: url("../assets/services/client-bancor-bw.svg");
+    background-image: url("/services/client-bancor-bw.svg");
 }
 
 /*--------- cube 2 ---------*/
 
 .flip2 .front {
-    background-image: url("../assets/services/client-bin-bw.svg");
+    background-image: url("/services/client-bin-bw.svg");
 }
 .flip2 .top {
-    background-image: url("../assets/services/client-neo-bw.svg");
+    background-image: url("/services/client-neo-bw.svg");
 }
 .flip2 .back {
-    background-image: url("../assets/services/client-simplex-bw.svg");
+    background-image: url("/services/client-simplex-bw.svg");
 }
 .flip2 .bottom {
-    background-image: url("../assets/services/client-dxe-bw.svg");
+    background-image: url("/services/client-dxe-bw.svg");
 }
 
 /*--------- cube 3 ---------*/
 
 .flip3 .front {
-    background-image: url("../assets/services/client-tron-bw.svg");
+    background-image: url("/services/client-tron-bw.svg");
 }
 .flip3 .top {
-    background-image: url("../assets/services/client-qtum-bw.svg");
+    background-image: url("/services/client-qtum-bw.svg");
 }
 .flip3 .back {
-    background-image: url("../assets/services/client-land-bw.svg");
+    background-image: url("/services/client-land-bw.svg");
 }
 .flip3 .bottom {
-    background-image: url("../assets/services/client-aelf-bw.svg");
+    background-image: url("/services/client-aelf-bw.svg");
 }
 
 /*--------- cube 4 ---------*/
 
 .flip4 .front {
-    background-image: url("../assets/services/client-cardano-bw.svg");
+    background-image: url("/services/client-cardano-bw.svg");
 }
 .flip4 .top {
-    background-image: url("../assets/services/client-matic-bw.svg");
+    background-image: url("/services/client-matic-bw.svg");
 }
 .flip4 .back {
-    background-image: url("../assets/services/client-rsk-bw.svg");
+    background-image: url("/services/client-rsk-bw.svg");
 }
 .flip4 .bottom {
-    background-image: url("../assets/services/client-qtum-bw.svg");
+    background-image: url("/services/client-qtum-bw.svg");
 }
 
 /*--------- cube 5 ---------*/
 
 .flip5 .front {
-    background-image: url("../assets/services/client-et-bw.svg");
+    background-image: url("/services/client-et-bw.svg");
 }
 .flip5 .top {
-    background-image: url("../assets/services/client-icon-bw.svg");
+    background-image: url("/services/client-icon-bw.svg");
 }
 .flip5 .back {
-    background-image: url("../assets/services/client-wan-bw.svg");
+    background-image: url("/services/client-wan-bw.svg");
 }
 .flip5 .bottom {
-    background-image: url("../assets/services/client-skrill-bw.svg");
+    background-image: url("/services/client-skrill-bw.svg");
 }
 
 /*--------- cube 6 ---------*/
 
 .flip6 .front {
-    background-image: url("../assets/services/client-con-bw.svg");
+    background-image: url("/services/client-con-bw.svg");
 }
 .flip6 .top {
-    background-image: url("../assets/services/client-skrill-bw.svg");
+    background-image: url("/services/client-skrill-bw.svg");
 }
 .flip6 .back {
-    background-image: url("../assets/services/client-ardor-bw.svg");
+    background-image: url("/services/client-ardor-bw.svg");
 }
 .flip6 .bottom {
-    background-image: url("../assets/services/client-bitt-bw.svg");
+    background-image: url("/services/client-bitt-bw.svg");
 }
 
 /*--------- cube 1 ---------*/
 
 /* .flip1 .front:hover {
-    background-image: url("../assets/services/client-huobi.svg");
+    background-image: url("/services/client-huobi.svg");
 }
 .flip1 .top:hover {
-    background-image: url("../assets/services/client-bitt.svg");
+    background-image: url("/services/client-bitt.svg");
 }
 .flip1 .back:hover {
-    background-image: url("../assets/services/client-500.svg");
+    background-image: url("/services/client-500.svg");
 }
 .flip1 .bottom:hover {
-    background-image: url("../assets/services/client-bancor.svg");
+    background-image: url("/services/client-bancor.svg");
 } */
 
 /*--------- cube 2 ---------*/
 
 /* .flip2 .front:hover {
-    background-image: url("../assets/services/client-bin.svg");
+    background-image: url("/services/client-bin.svg");
 }
 .flip2 .top:hover {
-    background-image: url("../assets/services/client-neo.svg");
+    background-image: url("/services/client-neo.svg");
 }
 .flip2 .back:hover {
-    background-image: url("../assets/services/client-simplex.svg");
+    background-image: url("/services/client-simplex.svg");
 }
 .flip2 .bottom:hover {
-    background-image: url("../assets/services/client-dxe.svg");
+    background-image: url("/services/client-dxe.svg");
 } */
 
 /*--------- cube 3 ---------*/
 
 /* .flip3 .front:hover {
-    background-image: url("../assets/services/client-tron.svg");
+    background-image: url("/services/client-tron.svg");
 }
 .flip3 .top:hover {
-    background-image: url("../assets/services/client-qtum.svg");
+    background-image: url("/services/client-qtum.svg");
 }
 .flip3 .back:hover {
-    background-image: url("../assets/services/client-land.svg");
+    background-image: url("/services/client-land.svg");
 }
 .flip3 .bottom:hover {
-    background-image: url("../assets/services/client-aelf.svg");
+    background-image: url("/services/client-aelf.svg");
 } */
 
 /*--------- cube 4 ---------*/
 
 /* .flip4 .front:hover {
-    background-image: url("../assets/services/client-cardano.svg");
+    background-image: url("/services/client-cardano.svg");
 }
 .flip4 .top:hover {
-    background-image: url("../assets/services/client-matic.svg");
+    background-image: url("/services/client-matic.svg");
 }
 .flip4 .back:hover {
-    background-image: url("../assets/services/client-rsk.svg");
+    background-image: url("/services/client-rsk.svg");
 }
 .flip4 .bottom:hover {
-    background-image: url("../assets/services/client-qtum.svg");
+    background-image: url("/services/client-qtum.svg");
 } */
 
 /*--------- cube 5 ---------*/
 
 /* .flip5 .front:hover {
-    background-image: url("../assets/services/client-et.svg");
+    background-image: url("/services/client-et.svg");
 }
 .flip5 .top:hover {
-    background-image: url("../assets/services/client-icon.svg");
+    background-image: url("/services/client-icon.svg");
 }
 .flip5 .back:hover {
-    background-image: url("../assets/services/client-wan.svg");
+    background-image: url("/services/client-wan.svg");
 }
 .flip5 .bottom:hover {
-    background-image: url("../assets/services/client-skrill.svg");
+    background-image: url("/services/client-skrill.svg");
 } */
 
 /*--------- cube 6 ---------*/
 
 /* .flip6 .front:hover {
-    background-image: url("../assets/services/client-con.svg");
+    background-image: url("/services/client-con.svg");
 }
 .flip6 .top:hover {
-    background-image: url("../assets/services/client-skrill.svg");
+    background-image: url("/services/client-skrill.svg");
 }
 .flip6 .back:hover {
-    background-image: url("../assets/services/client-ardor.svg");
+    background-image: url("/services/client-ardor.svg");
 }
 .flip6 .bottom:hover {
-    background-image: url("../assets/services/client-bitt.svg");
+    background-image: url("/services/client-bitt.svg");
 } */
 
 
@@ -489,10 +489,10 @@ body {
 */
 /*
 .bitt{
-	background-image: url("../assets/services/client-bitt.svg");
+	background-image: url("/services/client-bitt.svg");
 }
 .bitt::after{
-	background-image: url("../assets/services/client-bitt-bw.svg");
+	background-image: url("/services/client-bitt-bw.svg");
 }
 .services-logo{
 	width: 300px;
