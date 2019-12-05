@@ -1,8 +1,8 @@
 const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const config = {
-  mode: "development",
   module: {
     rules: [
       {
@@ -27,8 +27,8 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
-      favicon: "./assets/favicon.ico"
-    })
+      favicon: "./public/favicon.ico"
+    }),
   ],
   devServer: {
     contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'assets')],
@@ -37,4 +37,11 @@ const config = {
   }
 };
 
-module.exports = config;
+module.exports = (env, argv) => {
+  if (argv.mode === 'production') {
+    config.plugins.push(new CopyPlugin([
+      { from: 'assets', to: '.' },
+    ]))
+  }
+  return config;
+};

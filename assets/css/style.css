@@ -50,15 +50,12 @@
 .content1 {
     display: flex;
     height: calc(100vh - 92px - var(--ch));
+    padding-bottom: 2em;
     text-align: center;
     flex-wrap: wrap-reverse;
 }
 .content1 canvas {
     margin: auto;
-}
-.content2, .content3 {
-    /* display: flex; */
-    height: 98vh;
 }
 
 #circle {
@@ -68,13 +65,16 @@
     height: 100%;
 }
 
-.content2 .circle {
+.content3 {
+    position: relative;
+}
+
+.copyright {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgb(91, 155, 213);
-    border: 1px solid rgb(65, 113, 156);
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 500;
 }
 
 .circle > p {
@@ -83,9 +83,33 @@
     border-radius: 5px;
 }
 
-.content3 > p {
-    /* margin: 40px auto; */
-    font-size: 60px;
-    color: black;
+.card-bg {
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    width: 50%;
+    min-width: 375px;
+    max-width: 780px;
+    min-height: 300px;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.05);
     text-align: center;
+}
+
+.card-title {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.card-bg .line {
+    margin: 20px auto;
+    height: 2px;
+    width: 80px;
+    background-color: #000;
+}
+
+.card-des {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: 500;
 }

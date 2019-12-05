@@ -21,7 +21,7 @@ body {
     --hgap: 10;
     --btn-trans: 0.2s ease;
     --mh: 4vw;
-    --ch: 5vw;
+    --ch: 6vw;
     --color1: #d2c3e6;
     --color2: #e2efff;
     --services-bg-color: #000;
@@ -122,7 +122,7 @@ body {
 	-webkit-transition: 0.5s ease;
 	-o-transition: 0.5s ease;
     transition: 0.5s ease;
-    background-size: 80%;
+    background-size: 85%;
     /*
 	border-left: 1px solid rgba(197,197,197,1.00);
 	border-right: 1px solid rgba(197,197,197,1.00);
