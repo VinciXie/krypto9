@@ -4,27 +4,15 @@
 body::after{
  display: none;
  content:
-	url("/services/client-500.svg")
-    url("/services/client-aelf.svg")
-    url("/services/client-ardor.svg")
-    url("/services/client-bancor.svg")
-    url("/services/client-bin.svg")
-    url("/services/client-bitt.svg")
-    url("/services/client-cardano.svg")
-    url("/services/client-con.svg")
-    url("/services/client-dxe.svg")
-    url("/services/client-et.svg")
-    url("/services/client-huobi.svg")
-    url("/services/client-icon.svg")
-    url("/services/client-land.svg")
-    url("/services/client-matic.svg")
-    url("/services/client-neo.svg")
-    url("/services/client-qtum.svg")
-    url("/services/client-rsk.svg")
-    url("/services/client-simplex.svg")
-    url("/services/client-skrill.svg")
-    url("/services/client-tron.svg")
-    url("/services/client-wan.svg")
+	url("/services/strategic-consulting.png")
+    url("/services/investor-relations.png")
+    url("/services/business-development.png")
+    url("/services/Exchange-Listing.png")
+    url("/services/Community-Management.png")
+    url("/services/Market-Value-Management.png")
+    url("/services/Public-Relations.png")
+    url("/services/Speaking-Events.png")
+    url("/services/Media-Relations.png")
 }
 
 body {
@@ -36,9 +24,7 @@ body {
     --ch: 5vw;
     --color1: #d2c3e6;
     --color2: #e2efff;
-    --client-color: #E3E3E3;
-    border-width: 0px;
-    margin: 0;
+    --services-bg-color: #000;
 }
 
 /* -------services Bar------- */
@@ -54,7 +40,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-	background-color: #EEEEEE;
+	/* background-color: #EEEEEE; */
 }
 .services-title {
 	-webkit-box-shadow: 0px 2px 4px #0000004d;
@@ -106,7 +92,7 @@ body {
     height: var(--ch);
     width: 100%;
 }
-.flip1, .flip2, .flip3, .flip4, .flip5, .flip6 {
+.flip1, .flip2, .flip3, .flip4, .flip5 {
     z-index: 100;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
@@ -129,13 +115,14 @@ body {
     height: inherit;
     width: inherit;
     opacity: 1;
-    background-color: #EEEEEE;
+    background-color: var(--services-bg-color);
 /*    transition: 1s var(--cubeease);*/
     background-repeat: no-repeat;
     background-position: center;
 	-webkit-transition: 0.5s ease;
 	-o-transition: 0.5s ease;
-	transition: 0.5s ease;
+    transition: 0.5s ease;
+    background-size: 80%;
     /*
 	border-left: 1px solid rgba(197,197,197,1.00);
 	border-right: 1px solid rgba(197,197,197,1.00);
@@ -185,91 +172,76 @@ body {
 /*--------- cube 1 ---------*/
 
 .flip1 .front {
-    background-image: url("/services/client-huobi-bw.svg");
+    background-image: url("/services/strategic-consulting.png");
 }
 .flip1 .top {
-    background-image: url("/services/client-bitt-bw.svg");
+    background-image: url("/services/investor-relations.png");
 }
 .flip1 .back {
-    background-image: url("/services/client-500-bw.svg");
+    background-image: url("/services/strategic-consulting.png");
 }
 .flip1 .bottom {
-    background-image: url("/services/client-bancor-bw.svg");
+    background-image: url("/services/investor-relations.png");
 }
 
 /*--------- cube 2 ---------*/
 
 .flip2 .front {
-    background-image: url("/services/client-bin-bw.svg");
+    background-image: url("/services/business-development.png");
 }
 .flip2 .top {
-    background-image: url("/services/client-neo-bw.svg");
+    background-image: url("/services/Exchange-Listing.png");
 }
 .flip2 .back {
-    background-image: url("/services/client-simplex-bw.svg");
+    background-image: url("/services/business-development.png");
 }
 .flip2 .bottom {
-    background-image: url("/services/client-dxe-bw.svg");
+    background-image: url("/services/Exchange-Listing.png");
 }
 
 /*--------- cube 3 ---------*/
 
 .flip3 .front {
-    background-image: url("/services/client-tron-bw.svg");
+    background-image: url("/services/Community-Management.png");
 }
 .flip3 .top {
-    background-image: url("/services/client-qtum-bw.svg");
+    background-image: url("/services/Market-Value-Management.png");
 }
 .flip3 .back {
-    background-image: url("/services/client-land-bw.svg");
+    background-image: url("/services/Community-Management.png");
 }
 .flip3 .bottom {
-    background-image: url("/services/client-aelf-bw.svg");
+    background-image: url("/services/Market-Value-Management.png");
 }
 
 /*--------- cube 4 ---------*/
 
 .flip4 .front {
-    background-image: url("/services/client-cardano-bw.svg");
+    background-image: url("/services/Public-Relations.png");
 }
 .flip4 .top {
-    background-image: url("/services/client-matic-bw.svg");
+    background-image: url("/services/Speaking-Events.png");
 }
 .flip4 .back {
-    background-image: url("/services/client-rsk-bw.svg");
+    background-image: url("/services/Public-Relations.png");
 }
 .flip4 .bottom {
-    background-image: url("/services/client-qtum-bw.svg");
+    background-image: url("/services/Speaking-Events.png");
 }
 
 /*--------- cube 5 ---------*/
 
 .flip5 .front {
-    background-image: url("/services/client-et-bw.svg");
+    background-image: url("/services/Media-Relations.png");
 }
 .flip5 .top {
-    background-image: url("/services/client-icon-bw.svg");
+    background-image: url("/services/Content-Creation.png");
 }
 .flip5 .back {
-    background-image: url("/services/client-wan-bw.svg");
+    background-image: url("/services/Media-Relations.png");
 }
 .flip5 .bottom {
-    background-image: url("/services/client-skrill-bw.svg");
-}
-
-/*--------- cube 6 ---------*/
-
-.flip6 .front {
-    background-image: url("/services/client-con-bw.svg");
-}
-.flip6 .top {
-    background-image: url("/services/client-skrill-bw.svg");
-}
-.flip6 .back {
-    background-image: url("/services/client-ardor-bw.svg");
-}
-.flip6 .bottom {
-    background-image: url("/services/client-bitt-bw.svg");
+    background-image: url("/services/Content-Creation.png");
 }
 
 /*--------- cube 1 ---------*/
@@ -346,22 +318,6 @@ body {
 .flip5 .bottom:hover {
     background-image: url("/services/client-skrill.svg");
 } */
-
-/*--------- cube 6 ---------*/
-
-/* .flip6 .front:hover {
-    background-image: url("/services/client-con.svg");
-}
-.flip6 .top:hover {
-    background-image: url("/services/client-skrill.svg");
-}
-.flip6 .back:hover {
-    background-image: url("/services/client-ardor.svg");
-}
-.flip6 .bottom:hover {
-    background-image: url("/services/client-bitt.svg");
-} */
-
 
 
 .cube-image {

@@ -1,6 +1,6 @@
 @font-face {
     font-family: k9;
-    src: url(/Avenir-95-Custom.Outerline-Normal.ttf)
+    src: url(/fonts/Avenir-95-Custom.Outerline-Normal.ttf)
 }
 
 .section1 {
@@ -25,6 +25,10 @@
     z-index: 10;
 }
 
+.top-logo.black {
+    background-image: url(/k9logo-black.png);
+}
+
 .slogan {
     font-size: 4em;
     text-align: center;
@@ -45,7 +49,7 @@
 
 .content1 {
     display: flex;
-    height: calc(99vh - 100px);
+    height: calc(100vh - 92px - var(--ch));
     text-align: center;
     flex-wrap: wrap-reverse;
 }

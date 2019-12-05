@@ -58,11 +58,27 @@ function rotatingPoints() {
 
 window.addEventListener("load", canvasApp, false);
 
-new fullpage('#fullpage', {
-    //options here
-    // autoScrolling: true,
-    // scrollHorizontally: true
+const myPage = new window.fullpage('#fullpage', {
+    onLeave: function (origin, destination, direction) {
+        // console.log('origin.index', origin.index);
+        // console.log('destination.index', destination.index);
+        if (origin.index !== destination.index) {
+            if (destination.index === 1) {
+                window.$('.top-logo').addClass('black');
+            } else {
+                window.$('.top-logo').removeClass('black');
+            }
+        }
+    }
 });
+
+// console.log('myPage', myPage);
+
+function toServices() {
+    myPage.moveSectionDown();
+}
+
+document.querySelector('#toServices').addEventListener('click', toServices)
 
 //methods
 // fullpage_api.setAllowScrolling(false);
