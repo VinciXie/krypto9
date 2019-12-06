@@ -1,6 +1,7 @@
 const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   module: {
@@ -13,15 +14,15 @@ const config = {
           }
         ]
       },
-      // {
-      //   test: /\.css$/,
-      //   use: [
-      //     {
-      //       loader: "style-loader",
-      //       loader: "css-loader"
-      //     }
-      //   ]
-      // }
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            loader: "css-loader"
+          }
+        ]
+      }
     ]
   },
   plugins: [
