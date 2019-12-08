@@ -1,6 +1,11 @@
 @font-face {
     font-family: k9;
-    src: url(/fonts/Avenir-95-Custom.Outerline-Normal.ttf)
+    src: url(/fonts/Avenir-Book.ttf)
+}
+
+body {
+    font-family: k9;
+    font-weight: 500;
 }
 
 .section1 {
@@ -32,10 +37,10 @@
 .slogan {
     font-size: 4em;
     text-align: center;
-    font-family: k9;
     width: 50%;
     min-width: 300px;
     color: whitesmoke;
+    font-weight: 600;
 }
 
 .nav-link {
@@ -67,6 +72,8 @@
 
 .content3 {
     position: relative;
+    background-image: url(../assets/white-bg.jpg);
+    background-repeat: no-repeat;
 }
 
 .copyright {
@@ -94,11 +101,12 @@
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.05);
     text-align: center;
+    background-color: #fff;
 }
 
 .card-title {
     font-size: 3em;
-    font-weight: 600;
+    font-weight: 900;
 }
 
 .card-bg .line {
@@ -111,5 +119,18 @@
 .card-des {
     margin-top: 20px;
     font-size: 1.5em;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.bottom-logos {
+    padding: 10px 12px;
+    background-color: rgb(25, 25, 39);
+    border-radius: 2px;
+}
+.bottom-logos > img {
+    width: 20px;
+    border-radius: 2px;
+}
+.bottom-logos > img + img {
+    margin-left: 5px;
 }

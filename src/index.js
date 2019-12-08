@@ -1,6 +1,7 @@
 
 const canvasApp = require('./sphere')
-// require('./clients.css')
+import './css/clients.css'
+import './css/style.css'
 
 // 第一屏的点的生成
 function rotatingPoints() {
@@ -64,21 +65,28 @@ const myPage = new window.fullpage('#fullpage', {
         // console.log('destination.index', destination.index);
         if (origin.index !== destination.index) {
             if (destination.index === 1) {
-                window.$('.top-logo').addClass('black');
+                // window.$('.top-logo').addClass('black');
             } else {
                 window.$('.top-logo').removeClass('black');
             }
+        }
+    },
+    afterLoad: function (origin, destination, direction) {
+        console.log('origin.index', origin.index);
+        console.log('destination.index', destination.index);
+        if (origin.index === 0 && destination.index === 1) {
+            window.$('.top-logo').addClass('black');
         }
     }
 });
 
 // console.log('myPage', myPage);
 
-function toServices() {
+function toContact() {
     myPage.moveSectionDown();
 }
 
-document.querySelector('#toServices').addEventListener('click', toServices)
+document.querySelector('#toContact').addEventListener('click', toContact)
 
 //methods
 // fullpage_api.setAllowScrolling(false);

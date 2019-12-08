@@ -3779,18 +3779,18 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
-schema-utils@^2.5.0:
-  version "2.6.0"
-  resolved "https://tech-npm.tezign.com/schema-utils/-/schema-utils-2.6.0.tgz#68a259aabbef9d08d1252c2e63c398e476308e80"
-  integrity sha1-aKJZqrvvnQjRJSwuY8OY5HYwjoA=
+schema-utils@^2.0.1, schema-utils@^2.6.0:
+  version "2.6.1"
+  resolved "https://tech-npm.tezign.com/schema-utils/-/schema-utils-2.6.1.tgz#eb78f0b945c7bcfa2082b3565e8db3548011dc4f"
+  integrity sha1-63jwuUXHvPoggrNWXo2zVIAR3E8=
   dependencies:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
 
-schema-utils@^2.6.0:
-  version "2.6.1"
-  resolved "https://tech-npm.tezign.com/schema-utils/-/schema-utils-2.6.1.tgz#eb78f0b945c7bcfa2082b3565e8db3548011dc4f"
-  integrity sha1-63jwuUXHvPoggrNWXo2zVIAR3E8=
+schema-utils@^2.5.0:
+  version "2.6.0"
+  resolved "https://tech-npm.tezign.com/schema-utils/-/schema-utils-2.6.0.tgz#68a259aabbef9d08d1252c2e63c398e476308e80"
+  integrity sha1-aKJZqrvvnQjRJSwuY8OY5HYwjoA=
   dependencies:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
@@ -4198,6 +4198,14 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://tech-npm.tezign.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+
+style-loader@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npm.taobao.org/style-loader/download/style-loader-1.0.1.tgz#aec6d4c61d0ed8d0a442faed741d4dfc6573888a"
+  integrity sha1-rsbUxh0O2NCkQvrtdB1N/GVziIo=
+  dependencies:
+    loader-utils "^1.2.3"
+    schema-utils "^2.0.1"
 
 supports-color@6.1.0, supports-color@^6.1.0:
   version "6.1.0"

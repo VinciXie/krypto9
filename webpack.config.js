@@ -3,6 +3,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+console.log('process.env.NODE_ENV', process.env.NODE_ENV);
+
+
 const config = {
   module: {
     rules: [
@@ -14,15 +17,7 @@ const config = {
           }
         ]
       },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            loader: "css-loader"
-          }
-        ]
-      }
+
     ]
   },
   plugins: [
@@ -30,6 +25,7 @@ const config = {
       template: "./public/index.html",
       favicon: "./public/favicon.ico"
     }),
+    
   ],
   devServer: {
     contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'assets')],
@@ -40,9 +36,18 @@ const config = {
 
 module.exports = (env, argv) => {
   if (argv.mode === 'production') {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [MiniCssExtractPlugin.loader, 'css-loader']
+    })
     config.plugins.push(new CopyPlugin([
       { from: 'assets', to: '.' },
-    ]))
+    ]), new MiniCssExtractPlugin())
+  } else {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    })
   }
   return config;
 };
