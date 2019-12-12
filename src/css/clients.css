@@ -21,7 +21,7 @@ body {
     --hgap: 10;
     --btn-trans: 0.2s ease;
     --mh: 4vw;
-    --ch: 6vw;
+    --ch: 7vw;
     --color1: #d2c3e6;
     --color2: #e2efff;
     --services-bg-color: #000;
@@ -94,20 +94,14 @@ body {
 }
 .flip1, .flip2, .flip3, .flip4, .flip5 {
     z-index: 100;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    height: inherit;
+    transform-style: preserve-3d;
+    height: 100%;
     width: 100%;
-    -webkit-transform: translateZ(calc(var(--ch)*-0.5));
-            transform: translateZ(calc(var(--ch)*-0.5));
-    -webkit-transition: -webkit-transform 1s var(--cubeease);
+    transform: translateZ(calc(var(--ch)*-0.5));
     transition: -webkit-transform 1s var(--cubeease);
-    -o-transition: transform 1s var(--cubeease);
     transition: transform 1s var(--cubeease);
     transition: transform 1s var(--cubeease), -webkit-transform 1s var(--cubeease);
-	-webkit-transform-origin: center center var(--trans-z);
-	    -ms-transform-origin: center center var(--trans-z);
-	        transform-origin: center center var(--trans-z);
+	transform-origin: center center var(--trans-z);
     float: left;
 }
 .side {
