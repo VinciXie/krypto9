@@ -28,7 +28,7 @@ const config = {
     
   ],
   devServer: {
-    contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'assets')],
+    contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'static')],
     compress: true,
     port: 9000,
   }
@@ -41,7 +41,7 @@ module.exports = (env, argv) => {
       use: [MiniCssExtractPlugin.loader, 'css-loader']
     })
     config.plugins.push(new CopyPlugin([
-      { from: 'assets', to: '.' },
+      { from: 'static/assets', to: 'assets' },
     ]), new MiniCssExtractPlugin())
   } else {
     config.module.rules.push({
