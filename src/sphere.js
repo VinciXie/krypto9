@@ -8,12 +8,10 @@ const bgc = '#000'
 function canvasApp() {
 	var theCanvas = document.getElementById("canvasOne");
 	var context = theCanvas.getContext("2d");
-	
+
 	var displayWidth;
 	var displayHeight;
-	var wait;
-	var count;
-	var numToAddEachFrame;
+	const numToAddEachFrame = 2;
 	var particleList;
 	var recycleBin;
 	var particleAlpha;
@@ -23,8 +21,8 @@ function canvasApp() {
 	var projCenterX;
 	var projCenterY;
 	var zMax;
-	var turnAngle;
-	var turnSpeed;
+	var turnAngle = 0; // initial angle
+	const turnSpeed = 2 * Math.PI / 1000; // the sphere will rotate at this speed (one complete rotation every 1600 frames).
 	var sphereCenterX, sphereCenterY, sphereCenterZ;
 	var particleRad;
 	var zeroAlphaDepth;
@@ -43,13 +41,10 @@ function canvasApp() {
 	var theta, phi;
 	var x0, y0, z0;
 
-	init();
+	let timestamp = Date.now();
+	const refreshTime = 25; // 浏览器一帧大约 16ms，偶尔会波动到 20ms，设置 25ms
 
 	function init() {
-		wait = 1;
-		count = wait - 1;
-		numToAddEachFrame = 8;
-
 		//particle color
 		r = 70;
 		g = 255;
@@ -89,47 +84,50 @@ function canvasApp() {
 		//alpha values will lessen as particles move further back, causing depth-based darkening:
 		zeroAlphaDepth = -750; 
 
-		turnSpeed = 2*Math.PI/1200; //the sphere will rotate at this speed (one complete rotation every 1600 frames).
-		turnAngle = 0; //initial angle
-
-        // timer = window.setInterval(onTimer, 10/24);
-        window.requestAnimationFrame(onTimer)
+		// timer = window.setInterval(onTimer, 10/24);
+		console.log('adfasfasdfasd');
+    window.requestAnimationFrame(onTimer)
 	}
+	init();
 
 	function onTimer() {
-		//if enough time has elapsed, we will add new particles.		
-		count++;
-		if (count >= wait) {
-			count = 0;
-			for (i = 0; i < numToAddEachFrame; i++) {
-				theta = Math.random()*2*Math.PI;
-				phi = Math.acos(Math.random()*2-1);
-				x0 = sphereRad*Math.sin(phi)*Math.cos(theta);
-				y0 = sphereRad*Math.sin(phi)*Math.sin(theta);
-				z0 = sphereRad*Math.cos(phi);
-				
-				//We use the addParticle function to add a new particle. The parameters set the position and velocity components.
-				//Note that the velocity parameters will cause the particle to initially fly outwards away from the sphere center (after
-				//it becomes unstuck).
-				var p = addParticle(x0, sphereCenterY + y0, sphereCenterZ + z0, 0.002*x0, 0.002*y0, 0.002*z0);
-				
-				//we set some "envelope" parameters which will control the evolving alpha of the particles.
-				p.attack = 50;
-				p.hold = 50;
-				p.decay = 100;
-				p.initValue = 0;
-				p.holdValue = particleAlpha;
-				p.lastValue = 0;
-				
-				//the particle will be stuck in one place until this time has elapsed:
-				p.stuckTime = 90 + Math.random()*20;
-				
-				p.accelX = 0;
-				p.accelY = gravity;
-				p.accelZ = 0;
-			}
+		if ((Date.now() - timestamp) < refreshTime) {
+			window.requestAnimationFrame(onTimer);
+			return 
 		}
-		
+		console.log('ttt', Date.now() - timestamp);
+		//if enough time has elapsed, we will add new particles.	
+		// console.log('ttt', Date.now() - timestamp);
+		timestamp = Date.now();
+
+		for (i = 0; i < numToAddEachFrame; i++) {
+			theta = Math.random()*2*Math.PI;
+			phi = Math.acos(Math.random()*2-1);
+			x0 = sphereRad*Math.sin(phi)*Math.cos(theta);
+			y0 = sphereRad*Math.sin(phi)*Math.sin(theta);
+			z0 = sphereRad*Math.cos(phi);
+			
+			//We use the addParticle function to add a new particle. The parameters set the position and velocity components.
+			//Note that the velocity parameters will cause the particle to initially fly outwards away from the sphere center (after
+			//it becomes unstuck).
+			var p = addParticle(x0, sphereCenterY + y0, sphereCenterZ + z0, 0.002*x0, 0.002*y0, 0.002*z0);
+			
+			//we set some "envelope" parameters which will control the evolving alpha of the particles.
+			p.attack = 50;
+			p.hold = 50;
+			p.decay = 100;
+			p.initValue = 0;
+			p.holdValue = particleAlpha;
+			p.lastValue = 0;
+			
+			//the particle will be stuck in one place until this time has elapsed:
+			p.stuckTime = 90 + Math.random()*20;
+			
+			p.accelX = 0;
+			p.accelY = gravity;
+			p.accelZ = 0;
+		}
+	
 		//update viewing angle
 		turnAngle = (turnAngle + turnSpeed) % (2*Math.PI);
 		sinAngle = Math.sin(turnAngle);
@@ -213,14 +211,13 @@ function canvasApp() {
 			}
 
 			p = nextParticle;
-        }
-        window.requestAnimationFrame(onTimer)
+    }
+    window.requestAnimationFrame(onTimer)
 	}
 
 	function addParticle(x0,y0,z0,vx0,vy0,vz0) {
-		var newParticle;
-		var color;
-		
+		var newParticle = {};
+
 		//check recycle bin for available drop:
 		if (recycleBin.first != null) {
 			newParticle = recycleBin.first;
@@ -232,10 +229,6 @@ function canvasApp() {
 			else {
 				recycleBin.first = null;
 			}
-		}
-		//if the recycle bin is empty, create a new particle (a new ampty object):
-		else {
-			newParticle = {};
 		}
 
 		//add to beginning of particle list
@@ -266,9 +259,9 @@ function canvasApp() {
 		else {
 			newParticle.right = false;
 		}
-		return newParticle;		
+		return newParticle;
 	}
-	
+
 	function recycle(p) {
 		//remove from particleList
 		if (particleList.first == p) {
