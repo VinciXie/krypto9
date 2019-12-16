@@ -1,12 +1,31 @@
 
 var sphereRad = 280;
-var radius_sp=1;
-
+var radius_sp = 1;
+var isVisible = true;
 // canvas 的背景色
 const bgc = '#000'
 
+var theCanvas = document.getElementById("canvasOne");
+
+function observerCanvas() {
+	if (IntersectionObserver) {
+		var intersectionObserver = new IntersectionObserver(function(entries) {
+			// If intersectionRatio is 0, the target is out of view
+			// and we do not need to do anything.
+			// console.log('entries[0].intersectionRatio', entries[0].intersectionRatio);
+			if (entries[0].intersectionRatio <= 0) {
+				isVisible = false;
+			} else {
+				isVisible = true;
+			}
+			// console.log('isVisible', isVisible);
+		});
+		// start observing
+		intersectionObserver.observe(theCanvas);
+	}
+}
+
 function canvasApp() {
-	var theCanvas = document.getElementById("canvasOne");
 	var context = theCanvas.getContext("2d");
 
 	var displayWidth;
@@ -86,16 +105,17 @@ function canvasApp() {
 
 		// timer = window.setInterval(onTimer, 10/24);
 		console.log('adfasfasdfasd');
-    window.requestAnimationFrame(onTimer)
+		window.requestAnimationFrame(onTimer);
+		observerCanvas()
 	}
 	init();
 
 	function onTimer() {
-		if ((Date.now() - timestamp) < refreshTime) {
+		const isWaiting = (Date.now() - timestamp) < refreshTime
+		if (isWaiting || !isVisible) {
 			window.requestAnimationFrame(onTimer);
 			return 
 		}
-		console.log('ttt', Date.now() - timestamp);
 		//if enough time has elapsed, we will add new particles.	
 		// console.log('ttt', Date.now() - timestamp);
 		timestamp = Date.now();
@@ -296,5 +316,6 @@ function canvasApp() {
 		}
 	}	
 }
+
 
 module.exports = canvasApp

@@ -36,5 +36,12 @@ function toContact() {
 
 document.querySelector('#toContact').addEventListener('click', toContact)
 
+// $('#wechat-logo').data('powertip', function() {
+//     console.log('wechat-logo');
+// 	return 'This will be the <b>tooltip text</b>.';
+// });
+$('#wechat-logo').powerTip({
+    offset: 20,
+});
 //methods
 // fullpage_api.setAllowScrolling(false);
