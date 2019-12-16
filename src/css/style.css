@@ -51,7 +51,6 @@ body {
     overflow: hidden;
 }
 
-
 .content1 {
     display: flex;
     height: calc(100vh - 92px - var(--ch));
@@ -59,8 +58,30 @@ body {
     text-align: center;
     flex-wrap: wrap-reverse;
 }
-.content1 canvas {
+.content1 div {
+    position: relative;
     margin: auto;
+    min-width: 375px;
+    min-height: 60%;
+}
+
+@media screen and (max-width: 600px) {
+    .content1 canvas {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.6);
+    }
+    .slogan {
+        font-size: 2em;
+    }
+    .top-logo {
+        width: 150px;
+        height: 100px;
+    }
+    .card-bg {
+        font-size: 12px;
+    }
 }
 
 #circle {
@@ -95,7 +116,7 @@ body {
     padding-top: 60px;
     padding-bottom: 40px;
     width: 50%;
-    min-width: 375px;
+    min-width: 325px;
     max-width: 780px;
     min-height: 300px;
     /* offset-x | offset-y | blur-radius | spread-radius | color */

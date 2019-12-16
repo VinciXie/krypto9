@@ -64,7 +64,7 @@ body {
     width: 40px;
 }
 .cubes {
-    width: 75%;
+    width: 80%;
     display: flex;
 	cursor: pointer;
 }
@@ -74,6 +74,14 @@ body {
     height: var(--ch);
     width: 100%;
 }
+
+.cube:nth-child(3) {
+    width: 110%;
+}
+.cube:nth-child(4) {
+    width: 90%;
+}
+
 .flip1, .flip2, .flip3, .flip4, .flip5 {
     z-index: 100;
     transform-style: preserve-3d;
@@ -81,7 +89,6 @@ body {
     width: 100%;
     transform: translateZ(calc(var(--ch)*-0.5));
     transition: transform 1s var(--cubeease);
-    transition: transform 1s var(--cubeease), -webkit-transform 1s var(--cubeease);
 	transform-origin: center center var(--trans-z);
     float: left;
 }
@@ -89,19 +96,11 @@ body {
     position: absolute;
     height: inherit;
     width: inherit;
-    opacity: 1;
     background-color: var(--services-bg-color);
-/*    transition: 1s var(--cubeease);*/
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 20%;
     transition: 0.5s ease;
-    background-size: 85%;
-    /*
-	border-left: 1px solid rgba(197,197,197,1.00);
-	border-right: 1px solid rgba(197,197,197,1.00);
-	border-bottom: 0px solid rgba(197,197,197,1.00);
-	border-top: 0px solid rgba(197,197,197,1.00);
-*/
+    background-size: auto 30%;
 }
 /*
 .side:hover{
