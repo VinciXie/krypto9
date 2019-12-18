@@ -2,9 +2,7 @@ const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
-console.log('process.env.NODE_ENV', process.env.NODE_ENV);
-
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const config = {
   module: {
@@ -28,7 +26,7 @@ const config = {
     
   ],
   devServer: {
-    contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'static')],
+    contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'public')],
     compress: true,
     port: 9000,
   }
@@ -40,9 +38,13 @@ module.exports = (env, argv) => {
       test: /\.css$/,
       use: [MiniCssExtractPlugin.loader, 'css-loader']
     })
-    config.plugins.push(new CopyPlugin([
-      { from: 'static/assets', to: 'assets' },
-    ]), new MiniCssExtractPlugin())
+    config.plugins.push(
+      new CleanWebpackPlugin(),
+      new CopyPlugin([
+        { from: 'public', to: '.', ignore: ['*.html', 'favicon.ico'] },
+      ]),
+      new MiniCssExtractPlugin()
+    )
   } else {
     config.module.rules.push({
       test: /\.css$/,

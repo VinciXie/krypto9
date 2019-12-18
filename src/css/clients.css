@@ -29,9 +29,12 @@ body {
 
 /* -------services Bar------- */
 .services {
+    position: absolute;
+    bottom: 0;
 	--sdelay:3;
     width: 100%;
     height: var(--ch);
+    max-height: 100px;
     display: flex;
 	flex-wrap: wrap;
     justify-content: center;
@@ -71,7 +74,7 @@ body {
 .cubes .cube {
     display: inline-block;
     perspective: 2.4vw;
-    height: var(--ch);
+    height: 100%;
     width: 100%;
 }
 

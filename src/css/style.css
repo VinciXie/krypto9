@@ -13,6 +13,7 @@ body {
 }
 
 .flex-center {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,14 +25,14 @@ body {
     left: 1em;
     height: 100px;
     width: 300px;
-    background-image: url(/k9logo-white.png);
+    background-image: url(../assets/k9logo-white.png);
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 10;
 }
 
 .top-logo.black {
-    background-image: url(/k9logo-black.png);
+    background-image: url(../assets/k9logo-black.png);
 }
 
 .slogan {
