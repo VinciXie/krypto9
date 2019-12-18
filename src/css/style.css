@@ -148,10 +148,17 @@ body {
     background-color: rgb(25, 25, 39);
     border-radius: 2px;
 }
-.bottom-logos > img {
+.bottom-logos > span {
     width: 20px;
+    height: 20px;
     border-radius: 2px;
 }
-.bottom-logos > img + img {
+.bottom-logos > span + span {
     margin-left: 5px;
+}
+
+.bottom-logos > span img {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
 }
