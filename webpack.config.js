@@ -8,14 +8,29 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpg|gif)$/i,
         use: [
           {
-            loader: "file-loader"
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
           }
         ]
       },
-
+      {
+        test: /\.ttf$/i,
+        use: [
+          "file-loader"
+        ]
+      },
+      {
+        test: /\.js$/i,
+        exclude: /(node_modules|bower_components)/,
+        use: [
+          'babel-loader'
+        ]
+      }
     ]
   },
   plugins: [

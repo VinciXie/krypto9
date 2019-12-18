@@ -79,10 +79,10 @@ body {
 }
 
 .cube:nth-child(3) {
-    width: 110%;
+    width: 115%;
 }
 .cube:nth-child(4) {
-    width: 90%;
+    width: 85%;
 }
 
 .flip1, .flip2, .flip3, .flip4, .flip5 {

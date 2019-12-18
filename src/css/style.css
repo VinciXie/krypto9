@@ -1,6 +1,6 @@
 @font-face {
     font-family: k9;
-    src: url(/fonts/Avenir-Book.ttf)
+    src: url(../assets/fonts/Avenir-Book.ttf)
 }
 
 body {
@@ -92,7 +92,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1600px) {
     .content1 div {
         width: 50%;
     }
@@ -100,7 +100,7 @@ body {
         position: absolute;
         top: 50%;
         left: 40%;
-        transform: translate(-50%, -50%) scale(1.2);
+        transform: translate(-50%, -50%) scale(1.1);
     }
 }
 
