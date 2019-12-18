@@ -41,7 +41,7 @@ module.exports = (env, argv) => {
     config.plugins.push(
       new CleanWebpackPlugin(),
       new CopyPlugin([
-        { from: 'public', to: '.', ignore: ['*.html', 'favicon.ico'] },
+        { from: 'public', to: '.', ignore: ['*.html', 'favicon.ico', '.DS_Store'] },
       ]),
       new MiniCssExtractPlugin()
     )

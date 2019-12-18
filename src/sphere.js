@@ -104,7 +104,6 @@ function canvasApp() {
 		zeroAlphaDepth = -750; 
 
 		// timer = window.setInterval(onTimer, 10/24);
-		console.log('adfasfasdfasd');
 		window.requestAnimationFrame(onTimer);
 		observerCanvas()
 	}

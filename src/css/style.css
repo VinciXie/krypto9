@@ -19,6 +19,12 @@ body {
     align-items: center;
 }
 
+.navbar {
+    position: absolute;
+    top: 1.5em;
+    right: 0.5em;
+}
+
 .top-logo {
     position: fixed;
     top: 1em;
@@ -62,6 +68,7 @@ body {
 .content1 div {
     position: relative;
     margin: auto;
+    /* width: 50%; */
     min-width: 375px;
     min-height: 60%;
 }
@@ -82,6 +89,18 @@ body {
     }
     .card-bg {
         font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .content1 div {
+        width: 50%;
+    }
+    .content1 canvas {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%) scale(1.2);
     }
 }
 
