@@ -114,7 +114,7 @@ body {
 .content3 {
     position: relative;
     background-image: url(../assets/white-bg.jpg);
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
 }
 
 .copyright {
