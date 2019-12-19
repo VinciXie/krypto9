@@ -317,4 +317,4 @@ function canvasApp() {
 }
 
 
-module.exports = canvasApp
+export default canvasApp
