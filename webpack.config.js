@@ -38,8 +38,10 @@ const config = {
       template: "./public/index.html",
       favicon: "./public/favicon.ico"
     }),
-    
   ],
+  externals: {
+    jquery: 'jQuery'
+  },
   devServer: {
     contentBase: [path.join(__dirname, 'dist'), path.join(__dirname, 'public')],
     compress: true,

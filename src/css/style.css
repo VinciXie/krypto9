@@ -3,6 +3,8 @@
     src: url(../assets/fonts/Avenir-Book.ttf)
 }
 
+@import "./jquery.powertip.css";
+
 body {
     font-family: k9;
     font-weight: 500;

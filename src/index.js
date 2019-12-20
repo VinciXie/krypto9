@@ -1,4 +1,9 @@
 
+// import fullpage from './assets/fullpage'
+import $ from 'jquery';
+import 'jquery-powertip'
+
+require('./assets/js/fullpage')
 import canvasApp from './sphere';
 import './css/clients.css'
 import './css/style.css'
