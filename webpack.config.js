@@ -3,6 +3,19 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const postcssPresetEnv = require('postcss-preset-env');
+
+function getPostCSSLoader() {
+  return {
+    loader: 'postcss-loader',
+    options: {
+      ident: 'postcss',
+      plugins: () => [
+        postcssPresetEnv(/* pluginOptions */)
+      ]
+    }
+  }
+}
 
 const config = {
   module: {
@@ -53,7 +66,7 @@ module.exports = (env, argv) => {
   if (argv.mode === 'production') {
     config.module.rules.push({
       test: /\.css$/,
-      use: [MiniCssExtractPlugin.loader, 'css-loader']
+      use: [MiniCssExtractPlugin.loader, 'css-loader', getPostCSSLoader()]
     })
     config.plugins.push(
       new CleanWebpackPlugin(),
@@ -65,7 +78,7 @@ module.exports = (env, argv) => {
   } else {
     config.module.rules.push({
       test: /\.css$/,
-      use: ['style-loader', 'css-loader']
+      use: ['style-loader', 'css-loader', getPostCSSLoader()]
     })
   }
   return config;

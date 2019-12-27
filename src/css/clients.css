@@ -69,7 +69,8 @@ body {
 .cubes {
     width: 80%;
     display: flex;
-	cursor: pointer;
+    cursor: pointer;
+    overflow: hidden;
 }
 .cubes .cube {
     display: inline-block;
@@ -90,7 +91,7 @@ body {
     transform-style: preserve-3d;
     height: 100%;
     width: 100%;
-    transform: translateZ(calc(var(--ch)*-0.5));
+    transform: translateZ(calc(var(--ch)*(-0.5)));
     transition: transform 1s var(--cubeease);
 	transform-origin: center center var(--trans-z);
     float: left;
@@ -108,7 +109,7 @@ body {
 /*
 .side:hover{
 	background-color: white;
-	}
+}
 */
 
 .bottom {
@@ -122,18 +123,6 @@ body {
 }
 .front {
     transform: rotateX(0deg) translateZ(calc(var(--ch)*0.5));
-}
-.show1 {
-    transform: translateZ(-70px) rotateX(-360deg);
-}
-.show3 {
-    transform: translateZ(-70px) rotateX(-180deg);
-}
-.show2 {
-    transform: translateZ(calc(var(--ch)*-0.5)) rotateX(-90deg);
-}
-.show4 {
-    transform: translateZ(-70px) rotateX(-270deg);
 }
 
 /*--------- cube 1 ---------*/
@@ -310,9 +299,6 @@ body {
 }
 .flip5 {
 	animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 0.8s) infinite ;	
-}
-.flip6 {
-	animation: flip-horizontal-bottom 20s var(--cubeease) calc(var(--sdelay) * 1s + 1s) infinite ;	
 }
 
 /*
